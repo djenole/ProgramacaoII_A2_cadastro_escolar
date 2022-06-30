@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class Factory {
 	public static Connection getConnection() throws SQLException {
-		return DriverManager.getConnection("");
+		return DriverManager.getConnection("jdbc:mysql://localhost/test\",\"root\",\"123456");
 	}
 
 }
