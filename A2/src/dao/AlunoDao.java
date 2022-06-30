@@ -93,12 +93,18 @@ public class AlunoDao {
 		preparedStatement.setString(5, aluno.getNaturalidade());
 		preparedStatement.setString(6, aluno.getEndereco());
 		preparedStatement.execute();
-		preparedStatement.close();
-		
-		
-		
+		preparedStatement.close();		
 	}
 	
+	
+
+	public void delete(Long id) throws SQLException {
+		String sql = "delete from alunos where id = "+id+"";
+		PreparedStatement preparedStatement = con.prepareStatement(sql);
+		preparedStatement.execute();
+		preparedStatement.close();
+		con.close();
+	}
 	
 	
 
