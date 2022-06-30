@@ -1,11 +1,13 @@
 package modelo;
 
+import java.sql.Date;
+
 public class Aluno {
 	private Long id;
 	private String nome;
 	private String email;
 	private String cpf;
-	private String dataNasc;
+	private Date dataNasc;
 	private String naturalidade;
 	private String endereco;
 	
@@ -33,11 +35,11 @@ public class Aluno {
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-	public String getDataNasc() {
+	public Date getDataNasc() {
 		return dataNasc;
 	}
-	public void setDataNasc(String dataNasc) {
-		this.dataNasc = dataNasc;
+	public void setDataNasc(Date date) {
+		this.dataNasc = date;
 	}
 	public String getNaturalidade() {
 		return naturalidade;
