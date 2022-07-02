@@ -21,7 +21,7 @@ public class TestInsertDao {
 		a1.setEmail(email);
 		a1.setCpf(cpf);
 		a1.getDataNasc();
-		a1.getNaturalidade()
+		a1.getNaturalidade();
 		a1.setEndereco(endereco);
 		
 		AlunoDao adao;
