@@ -81,6 +81,34 @@ public class AlunoDao {
 		return alunos;
 	}
 	
+	
+	public List<Aluno> searchForId(Long id) throws SQLException {
+		String query = "select * from alunos where nome id = "+id+"";
+		PreparedStatement stmt = con.prepareStatement(query);
+		ResultSet rset = stmt.executeQuery();
+		
+		List<Aluno> alunos = new ArrayList<Aluno>();
+		
+		while(rset.next()) {
+			Aluno aluno = new Aluno();
+			aluno.setNome(rset.getString("nome"));
+			aluno.setEmail(rset.getString("email"));
+			aluno.setCpf(rset.getString("cpf"));
+			aluno.setDataNasc(rset.getDate(query, null));
+			aluno.setNaturalidade(rset.getString("naturalidade"));
+			aluno.setEndereco(rset.getString("endereco"));
+			
+			alunos.add(aluno);
+		}
+		
+		rset.close();
+		stmt.close();
+		con.close();
+		
+		return alunos;
+	}
+	
+	
 	public void updateAluno(Aluno aluno, Long id) throws SQLException {
 		String sql = "UPDATE CONTATOS SET NOME = ?, EMAIL = ?, CPF = ?, DATA = ?, NATURALIDADE = ?, ENDERECO = ? WHERE ID = "+id+"";
 		
