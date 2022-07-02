@@ -7,7 +7,7 @@ public class Aluno {
 	private String nome;
 	private String email;
 	private String cpf;
-	private Date dataNasc;
+	private String dataNasc;
 	private String naturalidade;
 	private String endereco;
 	
@@ -35,11 +35,11 @@ public class Aluno {
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
-	public Date getDataNasc() {
+	public String getDataNasc() {
 		return dataNasc;
 	}
-	public void setDataNasc(Date date) {
-		this.dataNasc = date;
+	public void setDataNasc(String string) {
+		this.dataNasc = dataNasc;
 	}
 	public String getNaturalidade() {
 		return naturalidade;

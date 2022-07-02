@@ -24,7 +24,7 @@ public class AlunoDao {
 		stmt.setString(1, aluno.getNome());
 		stmt.setString(2, aluno.getEmail());
 		stmt.setString(3, aluno.getCpf());
-		stmt.setDate(4, aluno.getDataNasc());
+		stmt.setString(4, aluno.getDataNasc());
 		stmt.setString(5, aluno.getNaturalidade());
 		stmt.setString(6, aluno.getEndereco());
 		stmt.execute();
@@ -43,7 +43,7 @@ public class AlunoDao {
 			aluno.setNome(rset.getString("nome"));
 			aluno.setEmail(rset.getString("email"));
 			aluno.setCpf(rset.getString("CPF"));
-			aluno.setDataNasc(rset.getDate(query, null));
+			aluno.setDataNasc(rset.getString(""));
 			aluno.setNaturalidade(rset.getString("naturalidade"));
 			aluno.setEndereco(rset.getString("endereco"));
 			alunos.add(aluno);
@@ -68,7 +68,7 @@ public class AlunoDao {
 			aluno.setNome(rset.getString("nome"));
 			aluno.setEmail(rset.getString("email"));
 			aluno.setCpf(rset.getString("cpf"));
-			aluno.setDataNasc(rset.getDate(query, null));
+			aluno.setDataNasc(rset.getString(""));
 			aluno.setNaturalidade(rset.getString("naturalidade"));
 			aluno.setEndereco(rset.getString("endereco"));
 			
@@ -94,7 +94,7 @@ public class AlunoDao {
 			aluno.setNome(rset.getString("nome"));
 			aluno.setEmail(rset.getString("email"));
 			aluno.setCpf(rset.getString("cpf"));
-			aluno.setDataNasc(rset.getDate(query, null));
+			aluno.setDataNasc(rset.getString(""));
 			aluno.setNaturalidade(rset.getString("naturalidade"));
 			aluno.setEndereco(rset.getString("endereco"));
 			
@@ -117,7 +117,7 @@ public class AlunoDao {
 		preparedStatement.setString(1, aluno.getNome());
 		preparedStatement.setString(2, aluno.getEmail());
 		preparedStatement.setString(3, aluno.getCpf());
-		preparedStatement.setDate(4, aluno.getDataNasc());
+		preparedStatement.setString(4, aluno.getDataNasc());
 		preparedStatement.setString(5, aluno.getNaturalidade());
 		preparedStatement.setString(6, aluno.getEndereco());
 		preparedStatement.execute();

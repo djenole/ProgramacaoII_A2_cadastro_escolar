@@ -13,7 +13,7 @@ public class TestInsert {
 			stmt.setString(1, "Genin");
 			stmt.setString(2, "email@email.com");
 			stmt.setString(3, "00452014");
-			stmt.setDate(4, null);
+			stmt.setString(4, "");
 			stmt.setString(5, "carioca");
 			stmt.setString(6,"ruazinha 1234");
 			stmt.execute();
